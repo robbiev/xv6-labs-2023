@@ -1,5 +1,6 @@
 #include "kernel/types.h"
 #include "kernel/stat.h"
+#include "kernel/param.h"
 #include "user/user.h"
 #include "kernel/fs.h"
 #include "kernel/fcntl.h"
@@ -34,7 +35,7 @@ find(char *path, char *name, char *filter)
     }
     break;
   case T_DIR:
-    char buf[512];
+    char buf[MAXPATH];
 
     // need space for:
     //   path + '/' + DIRSIZ + '\0'
