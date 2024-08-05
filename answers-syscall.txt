@@ -1,0 +1,6 @@
+usertrap
+7, a7 register, exec syscall
+0, user mode
+800020b6:	00002683          	lw	a3,0(zero) # 0 <_entry-0x80000000>
+scause indicates code 13, Load page fault
+---
