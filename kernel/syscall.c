@@ -176,6 +176,6 @@ syscall(void)
   }
   if ((p->trace_mask & (1 << num)) != 0) {
     char *name = syscall_to_name[num];
-    printf("pid %d: syscall %s -> %d\n", p->pid, name, p->trapframe->a0);
+    printf("%d: syscall %s -> %d\n", p->pid, name, p->trapframe->a0);
   }
 }
